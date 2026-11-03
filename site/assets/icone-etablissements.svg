@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200">
+<defs>
+<linearGradient id="bg" x1="0.9" y1="0" x2="0.1" y2="1"><stop offset="0" stop-color="#fff39b"/><stop offset="1" stop-color="#fdaa50"/></linearGradient>
+<linearGradient id="roof" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6b77fb"/><stop offset="1" stop-color="#2b2f8f"/></linearGradient>
+<linearGradient id="col" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fdfdfd"/><stop offset="1" stop-color="#e4e0f7"/></linearGradient>
+<linearGradient id="lav" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9aa3fb"/><stop offset="1" stop-color="#d79fff"/></linearGradient>
+</defs>
+<circle cx="600" cy="600" r="540" fill="url(#bg)"/>
+<rect x="590" y="140" width="22" height="120" rx="8" fill="#2b2f8f"/>
+<polygon points="612,150 730,188 612,226" fill="url(#lav)"/>
+<polygon points="600,240 890,410 310,410" fill="url(#roof)" stroke="url(#roof)" stroke-width="30" stroke-linejoin="round"/>
+<rect x="300" y="410" width="600" height="56" rx="14" fill="#4048c8"/>
+<rect x="330" y="490" width="80" height="290" rx="14" fill="url(#col)"/>
+<rect x="483" y="490" width="80" height="290" rx="14" fill="url(#col)"/>
+<rect x="637" y="490" width="80" height="290" rx="14" fill="url(#col)"/>
+<rect x="790" y="490" width="80" height="290" rx="14" fill="url(#col)"/>
+<rect x="280" y="790" width="640" height="52" rx="16" fill="#4048c8"/>
+<rect x="240" y="852" width="720" height="52" rx="16" fill="#2b2f8f"/>
+</svg>

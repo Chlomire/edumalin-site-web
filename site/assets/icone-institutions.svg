@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200">
+<defs>
+<linearGradient id="bg" x1="0.7" y1="0" x2="0.3" y2="1"><stop offset="0" stop-color="#6b77fb"/><stop offset="1" stop-color="#2b2f8f"/></linearGradient>
+<linearGradient id="globe" x1="0.2" y1="0" x2="0.8" y2="1"><stop offset="0" stop-color="#d79fff"/><stop offset="1" stop-color="#9aa3fb"/></linearGradient>
+<linearGradient id="sun" x1="0.8" y1="0" x2="0.2" y2="1"><stop offset="0" stop-color="#fff39b"/><stop offset="1" stop-color="#fdaa50"/></linearGradient>
+<clipPath id="g"><circle cx="560" cy="650" r="320"/></clipPath>
+</defs>
+<circle cx="600" cy="600" r="540" fill="url(#bg)"/>
+<circle cx="560" cy="650" r="320" fill="url(#globe)"/>
+<g clip-path="url(#g)" fill="none" stroke="#4048c8" stroke-width="26" stroke-linecap="round">
+<ellipse cx="560" cy="650" rx="140" ry="320"/>
+<path d="M240 650 H880"/>
+<path d="M270 500 Q560 560 850 500"/>
+<path d="M270 800 Q560 860 850 800"/>
+<path d="M560 330 V970"/>
+</g>
+<circle cx="560" cy="650" r="320" fill="none" stroke="#4048c8" stroke-width="26"/>
+<path d="M820 560 C750 480 715 430 715 360 A105 105 0 0 1 925 360 C925 430 890 480 820 560 Z" fill="url(#sun)"/>
+<circle cx="820" cy="360" r="42" fill="#2b2f8f"/>
+</svg>

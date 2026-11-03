@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr" data-theme="light" data-space="site">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Liste d’attente · Édumalin</title>
+<meta name="description" content="Soyez informé dès l’ouverture de l’environnement d’essai Édumalin.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="../design-system/tokens.css?v=12">
+<link rel="stylesheet" href="../design-system/tokens-site.css?v=122">
+<link rel="stylesheet" href="site.css?v=122">
+</head>
+<body data-page="liste-attente">
+<main id="contenu">
+<section class="hero hero--page hero--plat"><div class="container">
+<img class="hero__shape" src="assets/forme-hero-3.webp" alt="" aria-hidden="true">
+<h1>Rejoignez la <span class="mark">liste d’attente</span></h1><p class="lead">Vous êtes enseignant ou formateur ? Inscrivez-vous pour être informé dès l’ouverture de l’environnement d’essai Édumalin.</p></div></section>
+
+<section class="s"><div class="container split">
+<form class="form ticket reveal" data-demo-form aria-labelledby="a-titre"><p class="ticket__strip"><span>Environnement d’essai Édumalin</span><span class="ticket__stamp" aria-hidden="true">★</span></p><h2 id="a-titre">Rejoindre la liste d’attente</h2>
+<div class="field"><label for="a-nom">Prénom</label><input id="a-nom" autocomplete="given-name" required></div>
+<div class="field"><label for="a-mail">Adresse e-mail</label><input id="a-mail" type="email" autocomplete="email" required></div>
+<div class="field"><label for="a-role">Vous êtes</label><select id="a-role" required><option value="">Choisir</option><option>Enseignant</option><option>Formateur</option></select></div>
+<button class="btn btn--primary" type="submit">Rejoindre la liste d’attente</button>
+<p class="form__ok" role="status" tabindex="-1">Merci ! Vous êtes sur la liste (démonstration : aucune donnée n’est envoyée).</p></form>
+<div class="reveal"><h2>Ce qui vous attend</h2><ul class="ticks"><li>Choisir un niveau et un sujet parmi ceux disponibles.</li><li>Découvrir l’environnement enseignant.</li><li>Visualiser l’expérience proposée à l’apprenant.</li></ul>
+<p class="muted">Environnement de découverte : il ne permet pas de créer une classe ni d’attribuer des activités à de vrais élèves.</p></div>
+</div></section></main>
+<script src="site-edits.js?v=122"></script>
+<script src="site.js?v=122"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr" data-theme="light" data-space="site">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inscription à un webinaire · Édumalin</title>
+<meta name="description" content="Formulaire d’inscription à un webinaire Édumalin.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="../design-system/tokens.css?v=12">
+<link rel="stylesheet" href="../design-system/tokens-site.css?v=122">
+<link rel="stylesheet" href="site.css?v=122">
+</head>
+<body data-page="webinaire-inscription">
+<main id="contenu">
+<section class="hero hero--page hero--plat"><div class="container">
+<img class="hero__shape" src="assets/forme-hero-3.webp" alt="" aria-hidden="true">
+<p class="crumbs"><a href="webinaires.html">Webinaires</a> › Inscription</p><h1>[Titre du webinaire]</h1><p class="lead">[Présentation et points abordés pendant le webinaire.]</p></div></section>
+
+<section class="s"><div class="container split split--top">
+<div class="reveal"><h2>Points abordés</h2><ul class="ticks"><li>[Point 1]</li><li>[Point 2]</li><li>[Point 3]</li></ul>
+<p class="meta">[Date] · [heure + fuseau horaire] · [durée] · [Intervenants et fonctions]</p></div>
+<form class="form reveal" data-demo-form aria-labelledby="f-titre"><h2 id="f-titre">Inscription</h2>
+<div class="form__row"><div class="field"><label for="nom">Prénom et nom</label><input id="nom" name="nom" autocomplete="name" required></div>
+<div class="field"><label for="mail">Adresse e-mail</label><input id="mail" name="mail" type="email" autocomplete="email" required></div></div>
+<div class="form__row"><div class="field"><label for="fonction">Fonction</label><input id="fonction" name="fonction" required></div>
+<div class="field"><label for="org">Établissement ou organisme</label><input id="org" name="org"></div></div>
+<div class="field"><label for="pays">Pays</label><input id="pays" name="pays" autocomplete="country-name" required></div>
+<button class="btn btn--primary" type="submit">Confirmer mon inscription</button>
+<p class="form__ok" role="status" tabindex="-1">Merci ! Votre inscription est bien prise en compte (démonstration : aucune donnée n’est envoyée).</p></form>
+</div></section></main>
+<script src="site-edits.js?v=122"></script>
+<script src="site.js?v=122"></script>
+</body>
+</html>

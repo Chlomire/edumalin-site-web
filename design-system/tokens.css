@@ -1,0 +1,484 @@
+/* ==========================================================================
+   Édumalin Design System · tokens.css
+   Source de vérité unique. Tout le reste (components.css, la doc) en dérive.
+   Préfixe : --em-   ·   Thèmes : clair (défaut), sombre via [data-theme="dark"]
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@400;500;700&family=Lexend:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* ---------- 1. Palettes brutes (ne pas utiliser directement dans l'UI) ---------- */
+
+  /* Bleu : action principale. 900 = navy de la marque */
+  --em-blue-50:  #eff6ff;
+  --em-blue-100: #dbeafe;
+  --em-blue-200: #bfdbfe;
+  --em-blue-300: #93c5fd;
+  --em-blue-400: #60a5fa;
+  --em-blue-500: #3b82f6;
+  --em-blue-600: #2563eb;
+  --em-blue-700: #1d4ed8;
+  --em-blue-800: #1e40af;
+  --em-blue-900: #1e3a8a;
+
+  /* Rose : bulle rose du logo. Alerte pédagogique, insatisfaisant */
+  --em-pink-50:  #fdf2f8;
+  --em-pink-100: #fce7f3;
+  --em-pink-200: #fbcfe8;
+  --em-pink-300: #f9a8d4;
+  --em-pink-400: #f472b6;
+  --em-pink-500: #ec4899;
+  --em-pink-600: #db2777;
+  --em-pink-700: #be185d;
+  --em-red-600: #dc2626;               /* texte « faux » côté enseignant */
+  --em-red-700: #b91c1c;               /* texte « faux » côté élève (contraste renforcé) */
+  --em-pink-800: #9d174d;
+  --em-pink-900: #831843;
+
+  /* Turquoise : bulle turquoise du logo. Réussite, très satisfaisant */
+  --em-teal-50:  #f0fffc;
+  --em-teal-100: #e4fffa;
+  --em-teal-200: #b8f7ea;
+  --em-teal-300: #84eed8;
+  --em-teal-400: #49cfb4;
+  --em-teal-500: #2abb9e;
+  --em-teal-600: #11a285;
+  --em-teal-700: #1b7462;
+  --em-teal-800: #125045;
+  --em-teal-900: #0f3c37;
+
+  /* Violet : magie, suggestions, remédiation */
+  --em-violet-50:  #f5f3ff;
+  --em-violet-100: #ede9fe;
+  --em-violet-200: #ddd6fe;
+  --em-violet-300: #c4b5fd;
+  --em-violet-400: #a78bfa;
+  --em-violet-500: #8b5cf6;
+  --em-violet-600: #7c3aed;
+  --em-violet-700: #6d28d9;
+  --em-violet-800: #5b21b6;
+  --em-violet-900: #4c1d95;
+
+  /* Ambre : attention, délais */
+  --em-amber-50:  #fffbeb;
+  --em-amber-100: #fef3c7;
+  --em-amber-200: #fde68a;
+  --em-amber-300: #fcd34d;
+  --em-amber-400: #fbbf24;
+  --em-amber-500: #f59e0b;
+  --em-amber-600: #d97706;
+  --em-amber-700: #b45309;
+  --em-amber-800: #92400e;
+  --em-amber-900: #78350f;
+
+  /* Encre : neutres de la plateforme (gris Figma neutral/50 → 900) */
+  --em-ink-0:   #ffffff;
+  --em-ink-25:  #f9fafb;
+  --em-ink-50:  #f3f4f6;
+  --em-ink-100: #e5e7eb;
+  --em-ink-200: #d1d5db;
+  --em-ink-300: #9ca3af;
+  --em-ink-400: #9ca3af;
+  --em-ink-500: #6b7280;
+  --em-ink-600: #4b5563;
+  --em-ink-700: #374151;
+  --em-ink-800: #1f2937;
+  --em-ink-900: #111827;
+  --em-ink-950: #111827;
+
+  /* ---------- 2. Typographie ---------- */
+  --em-font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;   /* titres et corps enseignant : Inter (Figma plateforme) */
+  --em-font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --em-font-mono:    'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --em-font-size-xs:   0.75rem;    /* 12 */
+  --em-font-size-sm:   0.875rem;   /* 14 */
+  --em-font-size-md:   1rem;       /* 16 */
+  --em-font-size-lg:   1.25rem;    /* 20 */
+  --em-font-size-xl:   1.5rem;     /* 24 */
+  --em-font-size-2xl:  2rem;       /* 32 */
+  --em-font-size-3xl:  2.75rem;    /* 44 */
+  --em-font-size-hero: clamp(2.75rem, 7vw + 1rem, 5.5rem);
+
+  --em-leading-tight: 1.15;
+  --em-leading-snug:  1.35;
+  --em-leading-body:  1.6;
+
+  /* ---------- 3. Espacement (base 4px) ---------- */
+  --em-space-1:  4px;
+  --em-space-2:  8px;
+  --em-space-3:  12px;
+  --em-space-4:  16px;
+  --em-space-5:  20px;
+  --em-space-6:  24px;
+  --em-space-8:  32px;
+  --em-space-10: 40px;
+  --em-space-12: 48px;
+  --em-space-16: 64px;
+
+  /* ---------- 4. Formes : la « bulle » est la signature ---------- */
+  --em-radius-xs:   6px;
+  --em-radius-sm:   8px;
+  --em-radius-md:   12px;
+  --em-radius-lg:   16px;
+  --em-radius-xl:   24px;
+  --em-radius-pill: 999px;
+  --em-radius-bubble: 20px 20px 20px 4px;     /* coin « queue » de bulle, en bas à gauche */
+  --em-radius-bubble-r: 20px 20px 4px 20px;   /* variante miroir */
+
+  /* ---------- 5. Mouvement : ça rebondit, mais vite ---------- */
+  --em-ease-boing: cubic-bezier(0.34, 1.56, 0.64, 1);   /* léger dépassement */
+  --em-ease-out:   cubic-bezier(0.22, 1, 0.36, 1);
+  --em-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --em-dur-fast: 120ms;
+  --em-dur-base: 220ms;
+  --em-dur-slow: 400ms;
+
+  /* ---------- 5b. Points de rupture (appareils des frames Figma : iPhone 13 & 14, iPad horizontal, laptop) ---------- */
+  /* Les variables ne s'utilisent pas dans une @media : ce sont des repères. Valeurs à confirmer avec le Figma. */
+  --em-bp-mobile: 390px;
+  --em-bp-tablet: 768px;
+  --em-bp-tablet-landscape: 1180px;
+  --em-bp-laptop: 1440px;
+
+  /* ---------- 6. Z-index ---------- */
+  --em-z-sticky: 10;
+  --em-z-overlay: 100;
+  --em-z-toast: 1000;
+
+  /* ---------- 7. Tokens sémantiques : thème clair (utiliser CEUX-LÀ dans l'UI) ---------- */
+  --em-background:             var(--em-ink-25);
+  --em-surface:        var(--em-ink-0);
+  --em-surface-subtle:      var(--em-ink-50);
+  --em-border:         var(--em-ink-100);
+  --em-border-strong:  var(--em-ink-200);
+
+  --em-text-primary:           var(--em-blue-900);
+  --em-text-secondary:     var(--em-ink-500);
+  --em-text-tertiary:     var(--em-ink-400);
+  --em-text-link:      var(--em-blue-700);
+
+  --em-primary:        var(--em-blue-600);
+  --em-primary-hover:  var(--em-blue-700);
+  --em-primary-depth:  var(--em-blue-800);   /* « épaisseur » du bouton 3D */
+  --em-primary-soft:   var(--em-blue-50);
+  --em-primary-soft-border: var(--em-blue-200);
+  --em-on-primary:     #ffffff;
+  --em-control-on:   #16a34a;          /* Figma color/control/on */
+  --em-control-off:  #6b7280;          /* Figma color/control/off */
+  --em-btn-fs-sm: 12px; --em-btn-fs-md: 16px; --em-btn-fs-lg: 20px;   /* Figma font/size/button-s, -m, -l */
+  --em-flag-fs: 16px;
+  --em-check-size:   20px;  --em-switch-w: 28px;  --em-switch-h: 14px;   /* Figma layout/check-size, switch-width, switch-height */
+  --em-text-nav:       #374151;          /* libellés de navigation (sidebar) : neutral/700 */
+
+  --em-magic-from: var(--em-blue-600);        /* dégradé « Créer une activité » */
+  --em-magic-to:   var(--em-violet-500);
+  --em-magic-depth: var(--em-violet-800);
+
+  --em-focus-ring:     color-mix(in srgb, var(--em-violet-500) 45%, transparent);
+
+  --em-success:        var(--em-green-700);
+  --em-success-soft:   #f0fdf4;
+  --em-success-border: #86efac;
+  --em-warning:        var(--em-amber-700);
+  --em-warning-soft:   var(--em-amber-50);
+  --em-warning-border: #fcd34d;
+  --em-danger:         var(--em-red-600);
+  --em-danger-soft:    #fef2f2;
+  --em-danger-border:  #fca5a5;
+  --em-info:           var(--em-blue-700);
+  --em-info-soft:      var(--em-blue-50);
+  --em-info-border:    #93c5fd;
+
+  /* Niveaux de maîtrise : le vocabulaire central du produit */
+  --em-color-intention-practice-bg: #fef3c7; --em-color-intention-practice-text: #92400e;
+  --em-color-intention-learn-bg: #bfcdff;    --em-color-intention-learn-text: #021c56;
+  --em-color-intention-assess-bg: #dcd6ff;   --em-color-intention-assess-text: #4800ec;
+  --em-color-subject-tag-francais-bg: #eaf0ff; --em-color-subject-tag-francais-text: #475a86;
+  --em-color-subject-tag-maths-bg: #fde8e8; --em-color-subject-tag-maths-text: #b91c1c;
+  --em-color-subject-tag-sciences-bg: #e1ffdb; --em-color-subject-tag-sciences-text: #15803d;
+  --em-color-subject-tag-histoire-bg: #fffae6; --em-color-subject-tag-histoire-text: #b45309;
+  --em-color-subject-tag-oral-bg: #ffe6f3; --em-color-subject-tag-oral-text: #be185d;
+  --em-color-subject-tag-physique-bg: #e2fff9; --em-color-subject-tag-physique-text: #0f766e;
+  --em-level-excellent-solid:  var(--em-teal-500);
+  --em-level-excellent-soft:   #f1fffc;
+  --em-level-excellent-border: #49cfb4;
+  --em-level-excellent-text:   #1b7362;
+
+  --em-level-good-solid:       var(--em-blue-500);
+  --em-level-good-soft:        #ebf3fe;
+  --em-level-good-border:      #6aa3ff;
+  --em-level-good-text:        #2563eb;
+
+  --em-level-fragile-solid:    var(--em-violet-300);
+  --em-level-fragile-soft:     #f3effe;
+  --em-level-fragile-border:   #8f7fee;
+  --em-level-fragile-text:     #3a01ba;
+
+  --em-level-poor-solid:       var(--em-pink-400);
+  --em-level-poor-soft:        #fff7fb;
+  --em-level-poor-border:      #ff93cc;
+  --em-level-poor-text:        var(--em-pink-700);
+
+  /* Matières : une couleur par matière, partagée par les deux espaces.
+     Les variantes soft/text sont calculées depuis le thème : rien à redéfinir en sombre. */
+  --em-green-500: #22c55e;
+  --em-green-600: #16a34a;
+  --em-green-700: #15803d;
+
+  --em-subject-francais:  var(--em-blue-600);
+  --em-subject-maths:     var(--em-violet-600);
+  --em-subject-sciences:  var(--em-green-600);
+  --em-subject-histoire:  var(--em-amber-500);
+  --em-subject-oral:      var(--em-pink-400);
+  --em-subject-physique:  var(--em-teal-500);
+
+  /* Réponses d'exercice (espace élève) : le « faux » a un fond et un contour roses, le texte est rouge (comme sur la plateforme) */
+  --em-correct:       var(--em-green-600);
+  --em-correct-soft:  #f2ffef;
+  --em-correct-text:  color-mix(in srgb, var(--em-green-700) 70%, var(--em-text-primary));
+  --em-wrong:         var(--em-pink-400);
+  --em-wrong-soft:    #fff7fb;
+  --em-wrong-text:    var(--em-red-600);
+  --em-retry:         var(--em-amber-500);
+  --em-retry-soft:    #fffae6;
+  --em-hint:          var(--em-amber-400);
+  --em-hint-soft:     color-mix(in srgb, var(--em-amber-300) 22%, var(--em-surface));
+
+  /* Décor organique (blobs) */
+  --em-blob-1: color-mix(in srgb, var(--em-violet-300) 55%, var(--em-surface));
+  --em-blob-2: color-mix(in srgb, var(--em-blue-300) 55%, var(--em-surface));
+
+  /* ---------- Réglages d'espace : valeurs par défaut = ENSEIGNANT (dense, sobre) ---------- */
+  --em-control-sm: 36px;
+  --em-control-md: 48px;
+  --em-control-lg: 60px;
+  --em-btn-radius: 16px;                     /* app enseignant : 16px (Figma) ; élève : pilule */
+  --em-card-pad: var(--em-space-6);
+  --em-radius-m: 12px; --em-radius-l: 16px;   /* Figma Dimensions radius/m, radius/l (fixes dans les deux espaces) */
+  --em-choice-border: 2px;                   /* élève : 3px */
+  --em-choice-color: #bfcdff;
+  --em-font-ui: var(--em-font-body);
+
+  /* Dégradés de marque (relevés dans l'app et dans Figma : Action/Primary-button-Gradient) */
+  --em-gradient-primary: linear-gradient(90deg, var(--em-blue-500), var(--em-violet-500));
+  --em-glow-primary: 0 6px 16px -4px color-mix(in srgb, var(--em-violet-600) 40%, transparent);
+  --em-gradient-card: linear-gradient(180deg, color-mix(in srgb, var(--em-violet-500) 8%, var(--em-surface)) 0%, var(--em-surface) 55%);
+  --em-border-accent: color-mix(in srgb, var(--em-violet-300) 45%, var(--em-surface));
+
+  /* Ombres */
+  --em-elevation-1:  0 1px 2px rgb(30 42 94 / 0.06), 0 1px 1px rgb(30 42 94 / 0.04);
+  --em-elevation-2:  0 4px 12px rgb(30 42 94 / 0.08), 0 2px 4px rgb(30 42 94 / 0.05);
+  --em-elevation-3:  0 16px 40px rgb(30 42 94 / 0.14), 0 4px 10px rgb(30 42 94 / 0.06);
+  --em-elevation-raised: 0 6px 0 var(--em-border-strong);   /* effet « sticker » */
+
+  color-scheme: light;
+}
+
+/* ---------- Thème sombre : mêmes noms, autres valeurs ---------- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --em-background:            var(--em-ink-950);
+    --em-surface:       var(--em-ink-900);
+    --em-surface-subtle:     var(--em-ink-800);
+    --em-border:        var(--em-ink-800);
+    --em-border-strong: var(--em-ink-700);
+
+    --em-text-primary:          var(--em-ink-50);
+    --em-text-secondary:    var(--em-ink-300);
+    --em-text-tertiary:    var(--em-ink-400);
+    --em-text-link:     var(--em-blue-300);
+    --em-text-nav:      var(--em-ink-200);
+
+    --em-primary:       var(--em-blue-600);
+    --em-primary-hover: var(--em-blue-500);
+    --em-primary-depth: var(--em-blue-900);
+    --em-primary-soft:  color-mix(in srgb, var(--em-blue-500) 16%, transparent);
+    --em-primary-soft-border: color-mix(in srgb, var(--em-blue-400) 40%, transparent);
+    --em-magic-depth:   var(--em-violet-900);
+    --em-focus-ring:    color-mix(in srgb, var(--em-violet-400) 55%, transparent);
+
+    --em-success: var(--em-teal-300);  --em-success-soft: color-mix(in srgb, var(--em-teal-500) 16%, transparent);  --em-success-border: color-mix(in srgb, var(--em-teal-400) 40%, transparent);
+    --em-warning: var(--em-amber-300); --em-warning-soft: color-mix(in srgb, var(--em-amber-500) 16%, transparent); --em-warning-border: color-mix(in srgb, var(--em-amber-400) 40%, transparent);
+    --em-danger:  var(--em-pink-300);  --em-danger-soft:  color-mix(in srgb, var(--em-pink-500) 16%, transparent);  --em-danger-border:  color-mix(in srgb, var(--em-pink-400) 40%, transparent);
+    --em-info:    var(--em-blue-300);  --em-info-soft:    color-mix(in srgb, var(--em-blue-500) 16%, transparent);  --em-info-border:    color-mix(in srgb, var(--em-blue-400) 40%, transparent);
+
+    --em-level-excellent-soft: color-mix(in srgb, var(--em-teal-500) 16%, transparent);   --em-level-excellent-border: color-mix(in srgb, var(--em-teal-400) 50%, transparent); --em-level-excellent-text: var(--em-teal-200);
+    --em-level-good-soft:      color-mix(in srgb, var(--em-blue-500) 16%, transparent);   --em-level-good-border:      color-mix(in srgb, var(--em-blue-400) 50%, transparent); --em-level-good-text:      var(--em-blue-200);
+    --em-level-fragile-soft:   color-mix(in srgb, var(--em-violet-500) 18%, transparent); --em-level-fragile-border:   color-mix(in srgb, var(--em-violet-400) 50%, transparent); --em-level-fragile-text:   var(--em-violet-200);
+    --em-level-poor-soft:      color-mix(in srgb, var(--em-pink-500) 16%, transparent);   --em-level-poor-border:      color-mix(in srgb, var(--em-pink-400) 50%, transparent); --em-level-poor-text:      var(--em-pink-200);
+
+    --em-elevation-1:  0 1px 2px rgb(0 0 0 / 0.4);
+    --em-elevation-2:  0 4px 12px rgb(0 0 0 / 0.4);
+    --em-elevation-3:  0 16px 40px rgb(0 0 0 / 0.55);
+    --em-elevation-raised: 0 6px 0 rgb(0 0 0 / 0.35);
+
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --em-background:            var(--em-ink-950);
+  --em-surface:       var(--em-ink-900);
+  --em-surface-subtle:     var(--em-ink-800);
+  --em-border:        var(--em-ink-800);
+  --em-border-strong: var(--em-ink-700);
+
+  --em-text-primary:          var(--em-ink-50);
+  --em-text-secondary:    var(--em-ink-300);
+  --em-text-tertiary:    var(--em-ink-400);
+  --em-text-link:     var(--em-blue-300);
+  --em-text-nav:      var(--em-ink-200);
+
+  --em-primary:       var(--em-blue-600);
+  --em-primary-hover: var(--em-blue-500);
+  --em-primary-depth: var(--em-blue-900);
+  --em-primary-soft:  color-mix(in srgb, var(--em-blue-500) 16%, transparent);
+  --em-primary-soft-border: color-mix(in srgb, var(--em-blue-400) 40%, transparent);
+  --em-magic-depth:   var(--em-violet-900);
+  --em-focus-ring:    color-mix(in srgb, var(--em-violet-400) 55%, transparent);
+
+  --em-success: var(--em-teal-300);  --em-success-soft: color-mix(in srgb, var(--em-teal-500) 16%, transparent);  --em-success-border: color-mix(in srgb, var(--em-teal-400) 40%, transparent);
+  --em-warning: var(--em-amber-300); --em-warning-soft: color-mix(in srgb, var(--em-amber-500) 16%, transparent); --em-warning-border: color-mix(in srgb, var(--em-amber-400) 40%, transparent);
+  --em-danger:  var(--em-pink-300);  --em-danger-soft:  color-mix(in srgb, var(--em-pink-500) 16%, transparent);  --em-danger-border:  color-mix(in srgb, var(--em-pink-400) 40%, transparent);
+  --em-info:    var(--em-blue-300);  --em-info-soft:    color-mix(in srgb, var(--em-blue-500) 16%, transparent);  --em-info-border:    color-mix(in srgb, var(--em-blue-400) 40%, transparent);
+
+  --em-level-excellent-soft: color-mix(in srgb, var(--em-teal-500) 16%, transparent);   --em-level-excellent-border: color-mix(in srgb, var(--em-teal-400) 50%, transparent); --em-level-excellent-text: var(--em-teal-200);
+  --em-level-good-soft:      color-mix(in srgb, var(--em-blue-500) 16%, transparent);   --em-level-good-border:      color-mix(in srgb, var(--em-blue-400) 50%, transparent); --em-level-good-text:      var(--em-blue-200);
+  --em-level-fragile-soft:   color-mix(in srgb, var(--em-violet-500) 18%, transparent); --em-level-fragile-border:   color-mix(in srgb, var(--em-violet-400) 50%, transparent); --em-level-fragile-text:   var(--em-violet-200);
+  --em-level-poor-soft:      color-mix(in srgb, var(--em-pink-500) 16%, transparent);   --em-level-poor-border:      color-mix(in srgb, var(--em-pink-400) 50%, transparent); --em-level-poor-text:      var(--em-pink-200);
+
+  --em-elevation-1:  0 1px 2px rgb(0 0 0 / 0.4);
+  --em-elevation-2:  0 4px 12px rgb(0 0 0 / 0.4);
+  --em-elevation-3:  0 16px 40px rgb(0 0 0 / 0.55);
+  --em-elevation-raised: 0 6px 0 rgb(0 0 0 / 0.35);
+
+  color-scheme: dark;
+}
+
+/* ==========================================================================
+   ESPACES : <html data-space="enseignant"> (défaut) ou <html data-space="eleve">
+   Même marque, mêmes couleurs, mêmes niveaux de maîtrise. Ce qui change :
+   la taille, la forme, le ton et le niveau de ludisme.
+
+                    ENSEIGNANT                 ÉLÈVE
+   police UI        Inter 14 px                Lexend 17 px
+   titres           Lexend 24-32               Lexend 30-40
+   contrôles        48 px, rayon 12            60 px, pilule
+   cartes           rayon 16, ombre légère     rayon 24-34, ombre douce, blobs
+   densité          tableaux, filtres          une chose à la fois
+   ton              factuel                    encourageant (pas de rouge)
+   Peut aussi se poser sur n'importe quel conteneur pour une démo locale.
+   ========================================================================== */
+[data-space="enseignant"] { --em-font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+
+[data-space="eleve"] {
+  --em-font-display: 'Lexend', 'Inter', system-ui, sans-serif;
+  --em-check-size: 28px;  --em-switch-w: 56px;  --em-switch-h: 32px;
+  --em-font-body: 'Lexend', 'Inter', system-ui, sans-serif;
+
+  --em-font-size-xs:  1rem;        /* 16 : Figma body-s */
+  --em-font-size-sm:  1.125rem;    /* 18 : Figma body-m */
+  --em-font-size-md:  1.25rem;     /* 20 */
+  --em-font-size-lg:  1.5rem;      /* 24 */
+  --em-font-size-xl:  2rem;        /* 32 : Figma h1 */
+  --em-font-size-2xl: 2.5rem;      /* 40 */
+  --em-font-size-3xl: 3rem;        /* 48 */
+
+  --em-radius-xs: 10px;
+  --em-radius-sm: 12px;
+  --em-radius-md: 16px;
+  --em-radius-lg: 24px;
+  --em-radius-xl: 32px;
+  --em-radius-bubble: 30px 30px 30px 6px;
+  --em-radius-bubble-r: 30px 30px 6px 30px;
+
+  --em-control-sm: 48px;      /* cible tactile minimale : 44 px */
+  --em-control-md: 60px;
+  --em-control-lg: 76px;
+  --em-wrong-text: var(--em-red-700);
+  --em-btn-radius: 100px;
+  --em-card-pad: var(--em-space-8);
+  --em-gradient-primary: linear-gradient(90deg, var(--em-blue-500), var(--em-violet-500));
+  --em-choice-border: 3px;
+  --em-choice-color: #bfcdff;
+
+  --em-background: #eff6ff;          /* Figma color/background/page (Élève) */
+  --em-surface-subtle: #dbeafe;       /* Figma color/background/subtle (Élève) */
+  --em-border: #dbeafe;               /* Figma color/border/default (Élève) */
+  --em-border-strong: #bfdbfe;        /* Figma color/border/strong (Élève) */
+  --em-text-secondary: #4b5563;
+  --em-btn-fs-sm: 16px; --em-btn-fs-md: 18px; --em-btn-fs-lg: 24px;
+  --em-flag-fs: 24px;
+  --em-elevation-1: 0 4px 18px rgb(30 58 138 / 0.08);
+  --em-elevation-2: 0 6px 20px rgb(30 58 138 / 0.1);
+  --em-dur-base: 260ms;
+  --em-dur-slow: 480ms;
+}
+
+/* ==========================================================================
+   ÉCHELLE ACCESSIBLE · v0.22.0
+   Une seule logique de tailles pour tous les formats : de VRAIES tailles, jamais un zoom.
+   (Avant : l'élève était dessiné pour l'iPad 1366 px puis réduit à 0,60 sur mobile : 8 px
+   pour les étiquettes, 11 px pour le texte courant. Illisible.)
+
+   Planchers garantis, quel que soit le format :
+     --em-font-size-caption   14 px   étiquettes, légendes, libellé de barre du bas
+     --em-font-size-body-min  16 px   texte lu (dates, descriptions, réponses)
+     --em-touch-min           44 px   toute cible tactile (WCAG 2.5.5)
+
+   Deux paliers, choisis par la largeur d'écran (≤ 720 px = compact) ou, pour la documentation,
+   par data-tier="compact" | "regular" posé sur un ancêtre :
+                       compact (mobile)    regular (iPad, ordinateur)
+     --em-font-size-xs      14                  16
+     --em-font-size-sm      16                  18
+     --em-font-size-md      18                  20
+     --em-font-size-lg      20                  24
+     --em-font-size-xl      24                  32
+     --em-font-size-2xl     28                  40
+     --em-font-size-3xl     32                  48
+     contrôles s / m / l    44 / 52 / 60        48 / 60 / 76
+     texte des boutons      16 / 18 / 20        16 / 18 / 24
+   ========================================================================== */
+:root {
+  --em-font-size-caption: 0.875rem;   /* 14 : plancher des légendes et étiquettes */
+  --em-font-size-body-min: 1rem;      /* 16 : plancher du texte courant */
+  --em-touch-min: 44px;               /* cible tactile minimale */
+}
+@media (max-width: 720px) {
+  [data-space="eleve"] { --em-tier: compact; }
+}
+[data-tier="compact"] [data-space="eleve"], [data-space="eleve"][data-tier="compact"], [data-tier="compact"][data-space="eleve"] { --em-tier: compact; }
+@media (max-width: 720px) {
+  [data-space="eleve"] {
+    --em-font-size-xs: 0.875rem;  --em-font-size-sm: 1rem;     --em-font-size-md: 1.125rem;
+    --em-font-size-lg: 1.25rem;   --em-font-size-xl: 1.5rem;   --em-font-size-2xl: 1.75rem;  --em-font-size-3xl: 2rem;
+    --em-control-sm: 44px;        --em-control-md: 52px;       --em-control-lg: 60px;
+    --em-btn-fs-sm: 16px;         --em-btn-fs-md: 18px;        --em-btn-fs-lg: 20px;
+    --em-flag-fs: 20px;
+  }
+}
+[data-tier="compact"] [data-space="eleve"], [data-space="eleve"][data-tier="compact"], [data-tier="compact"][data-space="eleve"] {
+  --em-font-size-xs: 0.875rem;  --em-font-size-sm: 1rem;     --em-font-size-md: 1.125rem;
+  --em-font-size-lg: 1.25rem;   --em-font-size-xl: 1.5rem;   --em-font-size-2xl: 1.75rem;  --em-font-size-3xl: 2rem;
+  --em-control-sm: 44px;        --em-control-md: 52px;       --em-control-lg: 60px;
+  --em-btn-fs-sm: 16px;         --em-btn-fs-md: 18px;        --em-btn-fs-lg: 20px;
+  --em-flag-fs: 20px;
+}
+
+/* Mouvement réduit : on garde l'info, on retire le rebond */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --em-ease-boing: linear;
+    --em-dur-fast: 1ms;
+    --em-dur-base: 1ms;
+    --em-dur-slow: 1ms;
+  }
+}
+
+
+/* Élève : police de confort de lecture (Mon confort de lecture) : Lexend par défaut, Atkinson Hyperlegible en option */
+[data-space="eleve"][data-font="atkinson"], [data-font="atkinson"] [data-space="eleve"] {
+  --em-font-body: 'Atkinson Hyperlegible', 'Lexend', system-ui, sans-serif;
+  --em-font-display: 'Atkinson Hyperlegible', 'Lexend', system-ui, sans-serif;
+}
