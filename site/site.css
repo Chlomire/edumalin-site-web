@@ -60,7 +60,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .btn--ghost { background: var(--em-site-paper); color: var(--em-site-ink); border-color: var(--em-site-indigo-soft); }
 .btn--ghost:hover { border-color: var(--em-site-indigo); color: var(--em-site-ink); }
 .btn--sun { background: var(--em-site-sun); color: var(--em-site-ink); }
-.btn--sun:hover { background: var(--em-site-peach); color: var(--em-site-ink); }
+.btn--sun:hover { background: var(--em-site-action-hover); color: var(--em-site-ink); }
 .btn--sm { padding: var(--em-space-2) var(--em-space-5); font-size: var(--em-font-size-sm); }
 .btn-row { display: flex; flex-wrap: wrap; gap: var(--em-space-3); margin-top: var(--em-space-6); }
 .btn-row.center { justify-content: center; }
@@ -164,7 +164,7 @@ a.card:hover { transform: translateY(calc(var(--em-space-2) * -1)); }
 .band .btn--ghost { background: transparent; color: var(--em-on-primary); border-color: var(--em-on-primary); }
 .band .btn--ghost:hover { background: var(--em-on-primary); color: var(--em-site-ink); }
 .band .btn--primary { background: var(--em-site-sun); color: var(--em-site-ink); }
-.band .btn--primary:hover { background: var(--em-site-peach); }
+.band .btn--primary:hover { background: var(--em-site-action-hover); }
 .cta-duo { display: grid; grid-template-columns: 1fr 1fr; gap: var(--em-space-6); }
 .cta-duo .card { padding: var(--em-space-10); }
 
@@ -473,7 +473,7 @@ h3 { font-weight: 600; }
 .s--night .dim, .s--aurore .dim, .hero .dim { color: var(--em-site-dim-dark); }
 .hero .eyebrow { background: color-mix(in srgb, var(--em-on-primary) 16%, transparent); color: var(--em-on-primary); }
 .hero .btn--primary, .s--night .btn--primary, .s--aurore .btn--primary { background: var(--em-site-sun); color: var(--em-site-ink); }
-.hero .btn--primary:hover, .s--night .btn--primary:hover, .s--aurore .btn--primary:hover { background: var(--em-site-peach); color: var(--em-site-ink); }
+.hero .btn--primary:hover, .s--night .btn--primary:hover, .s--aurore .btn--primary:hover { background: var(--em-site-action-hover); color: var(--em-site-ink); }
 .hero .btn--ghost, .s--night .btn--ghost, .s--aurore .btn--ghost { background: transparent; color: var(--em-on-primary); border-color: color-mix(in srgb, var(--em-on-primary) 55%, transparent); }
 .hero .btn--ghost:hover, .s--night .btn--ghost:hover, .s--aurore .btn--ghost:hover { background: var(--em-on-primary); color: var(--em-site-ink); }
 .hero .hero__note { color: var(--em-site-dim-dark); }
