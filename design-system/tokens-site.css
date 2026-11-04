@@ -36,7 +36,9 @@
 
 /* Style « studio » du site vitrine : fonds nuit, typographie fine, gribouillis dessinés à la main */
 :root {
-  --em-site-font: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --em-site-font-display: 'Figtree', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --em-site-font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --em-site-font: var(--em-site-font-body);
   --em-site-black: #101236;
   --em-site-black-soft: #1b1e52;
   --em-site-dim-dark: #b9bbe6;

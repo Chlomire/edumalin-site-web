@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200">
+<defs>
+<linearGradient id="bg" x1="0.9" y1="0" x2="0.1" y2="1"><stop offset="0" stop-color="#6b77fb"/><stop offset="1" stop-color="#2b2f8f"/></linearGradient>
+<linearGradient id="chip" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d79fff"/><stop offset="1" stop-color="#9aa3fb"/></linearGradient>
+<linearGradient id="sun" x1="0.8" y1="0" x2="0.2" y2="1"><stop offset="0" stop-color="#fff39b"/><stop offset="1" stop-color="#fdaa50"/></linearGradient>
+<linearGradient id="top" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4048c8"/><stop offset="1" stop-color="#1f2160"/></linearGradient>
+</defs>
+<circle cx="600" cy="600" r="540" fill="url(#bg)" stroke="#ffffff" stroke-width="30"/>
+<g fill="#f6f5f1">
+<rect x="455" y="320" width="36" height="100" rx="18"/><rect x="545" y="320" width="36" height="100" rx="18"/><rect x="635" y="320" width="36" height="100" rx="18"/><rect x="725" y="320" width="36" height="100" rx="18"/>
+<rect x="455" y="780" width="36" height="100" rx="18"/><rect x="545" y="780" width="36" height="100" rx="18"/><rect x="635" y="780" width="36" height="100" rx="18"/><rect x="725" y="780" width="36" height="100" rx="18"/>
+<rect x="320" y="455" width="100" height="36" rx="18"/><rect x="320" y="545" width="100" height="36" rx="18"/><rect x="320" y="635" width="100" height="36" rx="18"/><rect x="320" y="725" width="100" height="36" rx="18"/>
+<rect x="780" y="455" width="100" height="36" rx="18"/><rect x="780" y="545" width="100" height="36" rx="18"/><rect x="780" y="635" width="100" height="36" rx="18"/><rect x="780" y="725" width="100" height="36" rx="18"/>
+</g>
+<rect x="410" y="410" width="380" height="380" rx="76" fill="url(#chip)"/>
+<rect x="495" y="495" width="210" height="210" rx="46" fill="url(#top)"/>
+<polygon points="600,520 622,578 680,600 622,622 600,680 578,622 520,600 578,578" fill="url(#sun)" stroke="url(#sun)" stroke-width="14" stroke-linejoin="round"/>
+<polygon points="860,250 878,298 926,316 878,334 860,382 842,334 794,316 842,298" fill="url(#sun)" stroke="url(#sun)" stroke-width="12" stroke-linejoin="round"/>
+</svg>

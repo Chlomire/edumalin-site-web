@@ -452,7 +452,7 @@ h1, h2, h3 { hyphens: manual; }
 
 /* ===================== STYLE « STUDIO » ===================== */
 body { font-family: var(--em-site-font); padding-bottom: var(--em-space-16); }
-h1, h2, h3, .btn, .nav__link, .eyebrow { font-family: var(--em-site-font); }
+h1, h2, h3, .btn, .nav__link, .eyebrow { font-family: var(--em-site-font-display); }
 h1, h2 { font-weight: 500; letter-spacing: -0.015em; }
 h3 { font-weight: 600; }
 .dim { color: var(--em-site-dim-light); }
@@ -1254,3 +1254,19 @@ body { background: var(--em-site-beige); }
 .node, .node.is-blocked, .node.is-mid, .node.is-ok, .node.is-scanning { background: var(--em-site-indigo-soft); }
 .node.is-gap { background: var(--em-site-indigo-soft); }
 .lab__result { background: var(--em-site-paper); box-shadow: inset 0 0 0 var(--em-site-border-w) var(--em-site-indigo-soft); }
+
+/* Carrousel « IA, contenus, déploiement » (page Plateforme) : défilement horizontal, cartes sur fond de couleur */
+.dcar .pcar__hint { color: var(--em-site-dim-dark); }
+.dcar .pcar__btn { border-color: var(--em-on-primary); color: var(--em-on-primary); }
+.dcar .pcar__btn:hover:not(:disabled) { background: var(--em-on-primary); color: var(--em-site-ink); }
+.dcar .pcar__track { scrollbar-color: var(--em-site-sun) transparent; }
+.dcar__card { flex: 0 0 min(46rem, 90%); display: grid; grid-template-columns: auto 1fr; align-items: center; gap: var(--em-space-8); padding: var(--em-space-8); border: 0; box-shadow: none; color: var(--em-site-ink); }
+.dcar__card--sun { background: var(--em-site-sun); }
+.dcar__card--lav { background: var(--em-site-lavender); }
+.dcar__card--mint { background: var(--em-site-mint); }
+.s--night .dcar__card h3, .s--night .dcar__card p, .s--night .dcar__card .deck__n { color: var(--em-site-ink); }
+.dcar__card .deck__n small { font-weight: 400; color: inherit; }
+.dcar__icon { width: var(--em-site-shape-md); height: var(--em-site-shape-md); object-fit: contain; }
+.dcar__card h3 { margin: var(--em-space-2) 0 var(--em-space-3); font-size: var(--em-font-size-2xl); font-weight: 500; line-height: var(--em-leading-tight); }
+.dcar__card p { margin: 0; font-size: var(--em-font-size-md); line-height: var(--em-leading-snug); }
+@media (max-width: 900px) { .dcar__card { flex-basis: 88%; grid-template-columns: 1fr; gap: var(--em-space-4); padding: var(--em-space-6); } .dcar__icon { width: var(--em-site-icon-lg); height: var(--em-site-icon-lg); } }
