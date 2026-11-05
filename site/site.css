@@ -1283,3 +1283,8 @@ body { background: var(--em-site-beige); }
 .p2ia__logos img { max-width: 100%; max-height: var(--em-space-12); width: auto; height: auto; object-fit: contain; }
 .p2ia__master { margin-top: var(--em-space-8); padding: var(--em-space-8); border-radius: var(--em-radius-xl); }
 @media (max-width: 900px) { .path--3 { grid-template-columns: 1fr; } .path--3::before { display: none; } .path--3 li:nth-child(even) { margin-top: 0; } }
+.p2ia__five { grid-template-columns: repeat(5, 1fr); gap: var(--em-space-4); }
+.p2ia__steps { margin-top: var(--em-space-10); }
+@media (max-width: 1100px) { .p2ia__five { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .p2ia__five { grid-template-columns: 1fr; } }
+.s--night .p2ia__five .card, .s--night .p2ia__five .card h3, .s--night .p2ia__five .card p, .s--night .p2ia__five .card .deck__n { color: var(--em-site-ink); }
