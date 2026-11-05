@@ -11,6 +11,7 @@
       { id: 'solutions-institutions', label: 'Institutions et territoires', href: 'solutions-institutions.html' }
     ] },
     { id: 'impact', label: 'Impact', href: 'impact.html' },
+    { id: 'p2ia', label: 'P2IA', href: 'p2ia.html' },
     { id: 'ressources', label: 'Ressources', href: 'webinaires.html', children: [
       { id: 'webinaires', label: 'Webinaires', href: 'webinaires.html' },
       { id: 'faq', label: 'FAQ', href: 'faq.html' }
@@ -39,7 +40,7 @@
   var FOOTER = [
     { title: 'Découvrir', links: [
       { label: 'La plateforme', href: 'plateforme.html' }, { label: 'Solutions', href: 'solutions.html' },
-      { label: 'Impact', href: 'impact.html' }, { label: 'À propos', href: 'a-propos.html' }] },
+      { label: 'Impact', href: 'impact.html' }, { label: 'P2IA', href: 'p2ia.html' }, { label: 'À propos', href: 'a-propos.html' }] },
     { title: 'Ressources', links: [
       { label: 'Webinaires', href: 'webinaires.html' }, { label: 'FAQ', href: 'faq.html' }, { label: 'Blog', href: 'blog.html' }] },
     { title: 'Contact', links: [
