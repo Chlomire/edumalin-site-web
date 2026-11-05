@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200">
+<defs>
+<linearGradient id="lav" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9aa3fb"/><stop offset="1" stop-color="#d79fff"/></linearGradient>
+<linearGradient id="ind" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6b77fb"/><stop offset="1" stop-color="#2b2f8f"/></linearGradient>
+<linearGradient id="sun" x1="0.8" y1="0" x2="0.2" y2="1"><stop offset="0" stop-color="#fff39b"/><stop offset="1" stop-color="#fdaa50"/></linearGradient>
+<linearGradient id="bg" x1="0.9" y1="0" x2="0.1" y2="1"><stop offset="0" stop-color="#d79fff"/><stop offset="1" stop-color="#6b77fb"/></linearGradient>
+</defs>
+<circle cx="600" cy="600" r="540" fill="url(#bg)" stroke="#ffffff" stroke-width="30"/>
+<rect x="270" y="700" width="220" height="170" rx="36" fill="#f6f5f1"/>
+<rect x="490" y="570" width="220" height="300" rx="36" fill="url(#lav)"/>
+<rect x="710" y="440" width="220" height="430" rx="36" fill="url(#ind)"/>
+<circle cx="820" cy="320" r="70" fill="url(#sun)"/>
+<rect x="796" y="395" width="48" height="26" rx="13" fill="url(#sun)"/>
+<polygon points="380,430 396,474 440,490 396,506 380,550 364,506 320,490 364,474" fill="url(#sun)" stroke="url(#sun)" stroke-width="10" stroke-linejoin="round"/>
+</svg>
