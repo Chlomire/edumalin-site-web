@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200">
+<defs>
+<linearGradient id="lav" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9aa3fb"/><stop offset="1" stop-color="#d79fff"/></linearGradient>
+<linearGradient id="ind" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6b77fb"/><stop offset="1" stop-color="#2b2f8f"/></linearGradient>
+<linearGradient id="sun" x1="0.8" y1="0" x2="0.2" y2="1"><stop offset="0" stop-color="#fff39b"/><stop offset="1" stop-color="#fdaa50"/></linearGradient>
+<linearGradient id="bg" x1="0.9" y1="0" x2="0.1" y2="1"><stop offset="0" stop-color="#6b77fb"/><stop offset="1" stop-color="#2b2f8f"/></linearGradient>
+</defs>
+<circle cx="600" cy="600" r="540" fill="url(#bg)" stroke="#ffffff" stroke-width="30"/>
+<path d="M300 400 Q450 350 600 420 L600 820 Q450 750 300 800 Z" fill="#f6f5f1"/>
+<path d="M900 400 Q750 350 600 420 L600 820 Q750 750 900 800 Z" fill="#f6f5f1"/>
+<path d="M600 420 L600 820" stroke="url(#ind)" stroke-width="16" stroke-linecap="round"/>
+<rect x="350" y="480" width="190" height="34" rx="17" fill="url(#lav)"/>
+<rect x="350" y="560" width="150" height="34" rx="17" fill="url(#lav)"/>
+<rect x="660" y="480" width="190" height="34" rx="17" fill="url(#ind)"/>
+<rect x="660" y="560" width="190" height="52" rx="26" fill="url(#sun)"/>
+<rect x="660" y="650" width="130" height="34" rx="17" fill="url(#ind)"/>
+<polygon points="860,230 878,278 926,296 878,314 860,362 842,314 794,296 842,278" fill="url(#sun)" stroke="url(#sun)" stroke-width="12" stroke-linejoin="round"/>
+</svg>
