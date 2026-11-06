@@ -1,6 +1,13 @@
 /* Tokens propres au site vitrine (site/) : palette issue de la charte graphique (illustrations,
    formes, fonds). À ajouter au Figma design system avant toute réutilisation ailleurs. */
 :root {
+  /* Fonds en dégradé (remplacent les images fond-*.webp ; repris du Figma, variables surface/fond-*) */
+  --em-site-fond-nuit: linear-gradient(180deg, #041d56 0%, #0a2261 25%, #213076 45%, #4b4591 62%, #9d74c1 80%, #e08fa8 100%);
+  --em-site-fond-aurore: linear-gradient(180deg, #bf99f7 0%, #cb9dee 20%, #ddaccd 38%, #debbb2 50%, #bcafc6 64%, #757ed9 82%, #525bbf 100%);
+  --em-site-fond-lavande: linear-gradient(180deg, #9e82d7 0%, #8c84d9 35%, #4a50a8 64%, #12246b 100%);
+  --em-site-fond-soleil: linear-gradient(135deg, #fff9c2 0%, #f4faed 50%, #f5f4fd 100%);
+  --em-site-fond-menthe: linear-gradient(135deg, #dfedeb 0%, #ecf0fa 50%, #f8f3cc 100%);
+
   --em-site-ink: #1f2160;
   --em-site-ink-soft: #4a4d7a;
   --em-site-paper: #fdfdfd;
