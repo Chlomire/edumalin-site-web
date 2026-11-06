@@ -1,0 +1,86 @@
+/* Tokens propres au site vitrine (site/) : palette issue de la charte graphique (illustrations,
+   formes, fonds). À ajouter au Figma design system avant toute réutilisation ailleurs. */
+:root {
+  /* Fonds en dégradé (remplacent les images fond-*.webp ; repris du Figma, variables surface/fond-*) */
+  --em-site-fond-nuit: linear-gradient(180deg, #041d56 0%, #0a2261 25%, #213076 45%, #4b4591 62%, #9d74c1 80%, #e08fa8 100%);
+  --em-site-fond-aurore: linear-gradient(180deg, #bf99f7 0%, #cb9dee 20%, #ddaccd 38%, #debbb2 50%, #bcafc6 64%, #757ed9 82%, #525bbf 100%);
+  --em-site-fond-lavande: linear-gradient(180deg, #9e82d7 0%, #8c84d9 35%, #4a50a8 64%, #12246b 100%);
+  --em-site-fond-soleil: linear-gradient(135deg, #fff9c2 0%, #f4faed 50%, #f5f4fd 100%);
+  --em-site-fond-menthe: linear-gradient(135deg, #dfedeb 0%, #ecf0fa 50%, #f8f3cc 100%);
+
+  --em-site-ink: #1f2160;
+  --em-site-ink-soft: #4a4d7a;
+  --em-site-paper: #fdfdfd;
+  --em-site-indigo: #6b77fb;
+  --em-site-indigo-strong: #4048c8;
+  --em-site-indigo-soft: #eef0ff;
+  --em-site-navy: #2b2f8f;
+  --em-site-lavender: #d79fff;
+  --em-site-lavender-soft: #f6ebff;
+  --em-site-sun: #fff39b;
+  --em-site-sun-soft: #fffbd6;
+  --em-site-peach: #fdaa50;
+  --em-site-action-hover: #cc9efc;
+  --em-site-peach-soft: #fff0dc;
+  --em-site-mint: #d6ede0;
+  --em-site-mint-soft: #eef8f2;
+  --em-site-mint-ink: #1b7462;
+
+  --em-site-container: 72rem;
+  --em-site-prose: 42rem;
+  --em-site-border-w: 2px;
+  --em-site-header-h: 4.5rem;
+  --em-site-touch: 2.75rem;
+  --em-site-icon-lg: 7rem;
+  --em-site-icon-md: 5rem;
+  --em-site-avatar: 6.5rem;
+  --em-site-shape-lg: 22rem;
+  --em-site-shape-md: 14rem;
+  --em-site-section-y: clamp(3.5rem, 8vw, 7rem);
+  --em-site-shadow: 0 0.75rem 2.5rem color-mix(in srgb, var(--em-site-navy) 14%, transparent);
+  --em-site-shadow-sm: 0 0.25rem 1rem color-mix(in srgb, var(--em-site-navy) 10%, transparent);
+  --em-site-overlay: color-mix(in srgb, var(--em-site-ink) 55%, transparent);
+}
+
+/* Style « studio » du site vitrine : fonds nuit, typographie fine, gribouillis dessinés à la main */
+:root {
+  --em-site-font-display: 'Figtree', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --em-site-font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --em-site-font: var(--em-site-font-body);
+  --em-site-black: #101236;
+  --em-site-black-soft: #1b1e52;
+  --em-site-dim-dark: #b9bbe6;
+  --em-site-dim-light: #7a7ca6;
+  --em-site-scribble-lav: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 9 C25 2 35 14 58 7 S95 2 118 8 S160 14 182 6 S200 5 197 9' stroke='%23d79fff' stroke-width='3.5'/%3E%3C/svg%3E");
+  --em-site-scribble-sun: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 9 C25 2 35 14 58 7 S95 2 118 8 S160 14 182 6 S200 5 197 9' stroke='%23fff39b' stroke-width='3.5'/%3E%3C/svg%3E");
+  --em-site-scribble-mint: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 9 C25 2 35 14 58 7 S95 2 118 8 S160 14 182 6 S200 5 197 9' stroke='%23d6ede0' stroke-width='3.5'/%3E%3C/svg%3E");
+  --em-site-scribble-peach: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 9 C25 2 35 14 58 7 S95 2 118 8 S160 14 182 6 S200 5 197 9' stroke='%23fdaa50' stroke-width='3.5'/%3E%3C/svg%3E");
+  --em-site-scribble-indigo: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 9 C25 2 35 14 58 7 S95 2 118 8 S160 14 182 6 S200 5 197 9' stroke='%234048c8' stroke-width='3.5'/%3E%3C/svg%3E");
+  --em-site-doodle-star: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 4 C34 22 38 26 58 30 C40 36 36 40 34 60 C30 42 26 38 6 34 C26 30 30 24 32 4 Z' stroke='%23fdaa50' stroke-width='3'/%3E%3C/svg%3E");
+  --em-site-doodle-star-lav: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 4 C34 22 38 26 58 30 C40 36 36 40 34 60 C30 42 26 38 6 34 C26 30 30 24 32 4 Z' stroke='%23d79fff' stroke-width='3'/%3E%3C/svg%3E");
+  --em-site-doodle-rays: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 48' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 40 L16 28 M28 22 L30 8 M44 24 L56 14' stroke='%23fff39b' stroke-width='4'/%3E%3C/svg%3E");
+  --em-site-pill-h: 3.5rem;
+}
+
+:root {
+  --em-site-doodle-circle: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 72' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cellipse cx='100' cy='36' rx='94' ry='28' stroke='%23fff39b' stroke-width='3.5' transform='rotate(-3 100 36)'/%3E%3C/svg%3E");
+  --em-site-doodle-heart: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 54 C8 36 4 18 16 10 C24 5 31 10 32 16 C34 10 42 5 50 10 C62 18 56 36 32 54 Z' stroke='%23d79fff' stroke-width='3.5'/%3E%3C/svg%3E");
+  --em-site-doodle-flower: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 66' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='32' cy='30' r='7' stroke='%23fdaa50' stroke-width='3'/%3E%3Cpath d='M32 23 C28 8 38 6 36 22 M39 30 C54 26 56 38 40 34 M32 37 C36 52 26 52 28 36 M25 30 C10 34 8 22 24 26' stroke='%23d79fff' stroke-width='3'/%3E%3Cpath d='M32 52 C30 58 34 62 32 64' stroke='%23d6ede0' stroke-width='3'/%3E%3C/svg%3E");
+  --em-site-doodle-smile: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='32' cy='32' r='26' stroke='%236b77fb' stroke-width='3.5'/%3E%3Cpath d='M22 26 L22 30 M42 26 L42 30' stroke='%236b77fb' stroke-width='4'/%3E%3Cpath d='M20 38 C26 48 38 48 44 38' stroke='%236b77fb' stroke-width='3.5'/%3E%3C/svg%3E");
+  --em-site-doodle-sun: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='32' cy='32' r='9' stroke='%23fdaa50' stroke-width='3.5'/%3E%3Cpath d='M32 6 L32 15 M32 49 L32 58 M6 32 L15 32 M49 32 L58 32 M13 13 L19 19 M45 45 L51 51 M51 13 L45 19 M19 45 L13 51' stroke='%23fdaa50' stroke-width='3.5'/%3E%3C/svg%3E");
+  --em-site-stack-r: 3rem;
+}
+
+:root {
+  --em-site-ticket-mask: radial-gradient(circle at 0 38%, #0000 var(--em-space-5), #000 calc(var(--em-space-5) + 1px)) left / 51% 100% no-repeat, radial-gradient(circle at 100% 38%, #0000 var(--em-space-5), #000 calc(var(--em-space-5) + 1px)) right / 51% 100% no-repeat;
+}
+
+:root { --em-site-reel-h: 5rem; }
+
+:root { --em-site-loop-w: 56; }
+
+:root { --em-site-fade-mask: linear-gradient(to bottom, #000 30%, transparent 95%); }
+
+:root { --em-site-fade-right-mask: linear-gradient(to right, transparent 0%, #000 45%); }
+
+:root { --em-site-beige: #fefdfa; }

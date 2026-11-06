@@ -10,7 +10,6 @@
       { id: 'solutions-organismes', label: 'Organismes de formation', href: 'solutions-organismes.html' },
       { id: 'solutions-institutions', label: 'Institutions et territoires', href: 'solutions-institutions.html' }
     ] },
-    { id: 'impact', label: 'Impact', href: 'impact.html' },
     { id: 'p2ia', label: 'P2IA', href: 'p2ia.html' },
     { id: 'ressources', label: 'Ressources', href: 'webinaires.html', children: [
       { id: 'webinaires', label: 'Webinaires', href: 'webinaires.html' },
@@ -40,11 +39,11 @@
   var FOOTER = [
     { title: 'Découvrir', links: [
       { label: 'La plateforme', href: 'plateforme.html' }, { label: 'Solutions', href: 'solutions.html' },
-      { label: 'Impact', href: 'impact.html' }, { label: 'P2IA', href: 'p2ia.html' }, { label: 'À propos', href: 'a-propos.html' }] },
+      { label: 'P2IA', href: 'p2ia.html' }, { label: 'À propos', href: 'a-propos.html' }] },
     { title: 'Ressources', links: [
       { label: 'Webinaires', href: 'webinaires.html' }, { label: 'FAQ', href: 'faq.html' }, { label: 'Blog', href: 'blog.html' }] },
     { title: 'Contact', links: [
-      { label: 'Échanger sur votre projet', href: 'contact.html' }, { label: 'Rejoindre la liste d’attente', href: 'liste-attente.html' }] }
+      { label: 'Échanger sur votre projet', href: 'contact.html' }] }
   ];
 
   function esc(t) {
@@ -167,7 +166,7 @@
       '<nav class="nav" id="nav-principal" aria-label="Navigation principale">' + navHtml(NAV) +
       '<div class="nav__lang">' + langBlock() + '</div></nav>' +
       '<div class="site-header__cta">' + langBlock() +
-      '<a class="btn btn--primary btn--sm" href="liste-attente.html">Rejoindre la liste d’attente</a></div></div>';
+      '</div></div>';
     document.body.insertBefore(header, skip.nextSibling);
 
     var footer = document.createElement('footer');

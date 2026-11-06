@@ -6,7 +6,7 @@
     ['solutions-etablissements', 'Établissements et réseaux scolaires'], ['solutions-enseignants', 'Enseignants et formateurs'],
     ['solutions-organismes', 'Organismes de formation'], ['solutions-institutions', 'Institutions et territoires'],
     ['impact', 'Impact'], ['webinaires', 'Webinaires'], ['webinaire-inscription', 'Inscription à un webinaire'],
-    ['faq', 'FAQ'], ['a-propos', 'À propos'], ['blog', 'Blog'], ['contact', 'Contact'], ['liste-attente', 'Liste d’attente']
+    ['faq', 'FAQ'], ['a-propos', 'À propos'], ['blog', 'Blog'], ['contact', 'Contact']
   ];
   var msg = document.getElementById('msg');
   var out = document.getElementById('out');

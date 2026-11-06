@@ -77,14 +77,14 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 /* Hero */
 .hero { position: relative; overflow: hidden; padding-block: var(--em-space-16) var(--em-site-section-y); background: linear-gradient(180deg, var(--em-site-sun-soft), var(--em-site-paper) 70%); }
-.hero::before { content: ""; position: absolute; inset: 0; background: url("assets/fond-soleil.webp") center / cover no-repeat; opacity: 0.55; }
+.hero::before { content: ""; position: absolute; inset: 0; background: var(--em-site-fond-soleil) center / cover no-repeat; opacity: 0.55; }
 .hero > .container { position: relative; z-index: 1; display: grid; grid-template-columns: 1.1fr 1fr; gap: var(--em-space-12); align-items: center; }
 .hero h1 { font-size: var(--em-font-size-3xl); }
 .hero--page { padding-block: var(--em-space-16) var(--em-space-12); }
 .hero--page > .container { display: block; }
 .hero--page h1 { font-size: var(--em-font-size-3xl); max-width: 20ch; }
-.hero--mint::before { background-image: url("assets/fond-menthe.webp"); }
-.hero--lav::before { background-image: url("assets/fond-lavande.webp"); opacity: 0.35; }
+.hero--mint::before { background-image: var(--em-site-fond-menthe); }
+.hero--lav::before { background-image: var(--em-site-fond-lavande); opacity: 0.35; }
 .hero--page .lead { max-width: var(--em-site-prose); }
 .hero__note { margin-top: var(--em-space-4); color: var(--em-site-ink-soft); font-size: var(--em-font-size-sm); }
 
@@ -159,7 +159,7 @@ a.card:hover { transform: translateY(calc(var(--em-space-2) * -1)); }
 .panel { padding: var(--em-space-8); border-radius: var(--em-radius-xl); }
 
 /* Bandeau CTA */
-.band { position: relative; overflow: hidden; margin-block: var(--em-space-8) 0; padding: var(--em-space-16) var(--em-space-8); border-radius: var(--em-radius-xl); background: var(--em-site-navy) url("assets/fond-nuit.webp") center / cover no-repeat; color: var(--em-on-primary); text-align: center; }
+.band { position: relative; overflow: hidden; margin-block: var(--em-space-8) 0; padding: var(--em-space-16) var(--em-space-8); border-radius: var(--em-radius-xl); background: var(--em-site-navy) var(--em-site-fond-nuit) center / cover no-repeat; color: var(--em-on-primary); text-align: center; }
 .band h2, .band p { color: var(--em-on-primary); }
 .band .btn--ghost { background: transparent; color: var(--em-on-primary); border-color: var(--em-on-primary); }
 .band .btn--ghost:hover { background: var(--em-on-primary); color: var(--em-site-ink); }
@@ -317,10 +317,10 @@ h1, h2, h3 { overflow-wrap: break-word; hyphens: auto; }
 @keyframes marq { to { transform: translateX(-50%); } }
 
 /* Sections colorées */
-.s--night { background: linear-gradient(var(--em-site-overlay), var(--em-site-overlay)), var(--em-site-navy) url("assets/fond-nuit.webp") center / cover no-repeat; color: var(--em-on-primary); }
+.s--night { background: linear-gradient(var(--em-site-overlay), var(--em-site-overlay)), var(--em-site-navy) var(--em-site-fond-nuit) center / cover no-repeat; color: var(--em-on-primary); }
 .s--night h2, .s--night h3, .s--night .lead, .s--night p { color: var(--em-on-primary); }
-.s--soleil { background: linear-gradient(color-mix(in srgb, var(--em-site-paper) 35%, transparent), color-mix(in srgb, var(--em-site-paper) 35%, transparent)), var(--em-site-sun-soft) url("assets/fond-soleil.webp") center / cover no-repeat; }
-.s--aurore { background: linear-gradient(var(--em-site-overlay), var(--em-site-overlay)), var(--em-site-navy) url("assets/fond-aurore.webp") center / cover no-repeat; color: var(--em-on-primary); }
+.s--soleil { background: linear-gradient(color-mix(in srgb, var(--em-site-paper) 35%, transparent), color-mix(in srgb, var(--em-site-paper) 35%, transparent)), var(--em-site-sun-soft) var(--em-site-fond-soleil) center / cover no-repeat; }
+.s--aurore { background: linear-gradient(var(--em-site-overlay), var(--em-site-overlay)), var(--em-site-navy) var(--em-site-fond-aurore) center / cover no-repeat; color: var(--em-on-primary); }
 .s--aurore h2, .s--aurore .lead { color: var(--em-on-primary); }
 .card--glass { background: color-mix(in srgb, var(--em-on-primary) 12%, transparent); backdrop-filter: blur(var(--em-space-4)); box-shadow: none; border: var(--em-site-border-w) solid color-mix(in srgb, var(--em-on-primary) 28%, transparent); }
 .card--glass h3, .card--glass p { color: var(--em-on-primary); }
@@ -341,7 +341,7 @@ h1, h2, h3 { overflow-wrap: break-word; hyphens: auto; }
 
 /* Scène d'essai */
 .stage { position: relative; min-height: 26rem; display: grid; align-content: end; }
-.stage__bg { position: absolute; inset: 0; border-radius: var(--em-radius-xl); background: var(--em-site-lavender-soft) url("assets/fond-lavande.webp") center / cover no-repeat; opacity: 0.55; }
+.stage__bg { position: absolute; inset: 0; border-radius: var(--em-radius-xl); background: var(--em-site-lavender-soft) var(--em-site-fond-lavande) center / cover no-repeat; opacity: 0.55; }
 .stage__av { position: absolute; width: var(--em-site-avatar); height: var(--em-site-avatar); border-radius: var(--em-radius-pill); box-shadow: var(--em-site-shadow); animation: float 7s var(--em-ease-in-out) infinite alternate; }
 .stage__av--1 { top: var(--em-space-4); left: var(--em-space-6); }
 .stage__av--2 { top: var(--em-space-12); right: var(--em-space-6); animation-delay: -2s; }
@@ -366,7 +366,7 @@ h1, h2, h3 { overflow-wrap: break-word; hyphens: auto; }
 
 /* Preuve */
 .proof { text-align: center; }
-.proof__big { display: grid; justify-items: center; padding: var(--em-space-8); border-radius: var(--em-radius-xl); background: var(--em-site-sun-soft) url("assets/fond-soleil.webp") center / cover no-repeat; }
+.proof__big { display: grid; justify-items: center; padding: var(--em-space-8); border-radius: var(--em-radius-xl); background: var(--em-site-sun-soft) var(--em-site-fond-soleil) center / cover no-repeat; }
 .proof__big strong { font-size: var(--em-font-size-hero); line-height: 1; letter-spacing: -0.03em; color: var(--em-site-indigo-strong); }
 .proof__big span { font-weight: 600; color: var(--em-site-ink-soft); }
 
@@ -412,10 +412,10 @@ h1, h2, h3 { hyphens: manual; }
 .hero--sol > .container { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--em-space-12); align-items: center; }
 .solhero__art { position: relative; display: grid; place-items: center; min-height: 22rem; }
 .solhero__art::before { content: ""; position: absolute; inset: var(--em-space-4); border-radius: var(--em-radius-pill); background: var(--em-site-lavender-soft) center / cover no-repeat; box-shadow: var(--em-site-shadow); animation: float 8s var(--em-ease-in-out) infinite alternate; }
-.art--lav::before { background-image: url("assets/fond-lavande.webp"); }
-.art--sun::before { background-image: url("assets/fond-soleil.webp"); }
-.art--mint::before { background-image: url("assets/fond-menthe.webp"); }
-.art--aurore::before { background-image: url("assets/fond-aurore.webp"); }
+.art--lav::before { background-image: var(--em-site-fond-lavande); }
+.art--sun::before { background-image: var(--em-site-fond-soleil); }
+.art--mint::before { background-image: var(--em-site-fond-menthe); }
+.art--aurore::before { background-image: var(--em-site-fond-aurore); }
 .solhero__art img { position: relative; width: 80%; max-width: var(--em-site-shape-lg); height: auto; }
 .sticker--s1 { top: var(--em-space-8); left: 0; transform: rotate(-5deg); }
 .sticker--s2 { bottom: var(--em-space-8); right: 0; transform: rotate(4deg); background: var(--em-site-mint); }
@@ -480,9 +480,9 @@ h3 { font-weight: 600; }
 .hero a:focus-visible, .s--night a:focus-visible, .s--aurore a:focus-visible, .hero button:focus-visible { outline-color: var(--em-site-sun); }
 
 /* En-têtes : fond nuit étoilé */
-.hero, .hero--page { background: linear-gradient(var(--em-site-black), color-mix(in srgb, var(--em-site-black) 55%, transparent)), var(--em-site-black) url("assets/fond-nuit.webp") center / cover no-repeat; }
-.hero--lav { background-image: linear-gradient(var(--em-site-black), color-mix(in srgb, var(--em-site-black) 50%, transparent)), url("assets/fond-aurore.webp"); background-size: cover; background-position: center; }
-.hero--mint { background-image: linear-gradient(var(--em-site-black), color-mix(in srgb, var(--em-site-black) 60%, transparent)), url("assets/fond-lavande.webp"); background-size: cover; background-position: center; }
+.hero, .hero--page { background: linear-gradient(var(--em-site-black), color-mix(in srgb, var(--em-site-black) 55%, transparent)), var(--em-site-black) var(--em-site-fond-nuit) center / cover no-repeat; }
+.hero--lav { background-image: linear-gradient(var(--em-site-black), color-mix(in srgb, var(--em-site-black) 50%, transparent)), var(--em-site-fond-aurore); background-size: cover; background-position: center; }
+.hero--mint { background-image: linear-gradient(var(--em-site-black), color-mix(in srgb, var(--em-site-black) 60%, transparent)), var(--em-site-fond-lavande); background-size: cover; background-position: center; }
 .hero::before, .hero--page::before { display: none; }
 .hero--page { padding-block: calc(var(--em-site-header-h) + var(--em-space-12)) var(--em-space-16); }
 .hero--page h1 { font-size: var(--em-font-size-3xl); font-weight: 500; max-width: 22ch; }
@@ -631,10 +631,10 @@ h3 { font-weight: 600; }
 .scatter__i:hover .scatter__ph img { transform: scale(1.08) rotate(-4deg); }
 .scatter__i h3 { margin-bottom: var(--em-space-2); }
 .scatter__i p { margin: 0; color: var(--em-site-ink-soft); font-size: var(--em-font-size-sm); }
-.art--sun.scatter__ph { background-image: url("assets/fond-soleil.webp"); }
-.art--lav.scatter__ph { background-image: url("assets/fond-lavande.webp"); }
-.art--mint.scatter__ph { background-image: url("assets/fond-menthe.webp"); }
-.art--aurore.scatter__ph { background-image: url("assets/fond-aurore.webp"); }
+.art--sun.scatter__ph { background-image: var(--em-site-fond-soleil); }
+.art--lav.scatter__ph { background-image: var(--em-site-fond-lavande); }
+.art--mint.scatter__ph { background-image: var(--em-site-fond-menthe); }
+.art--aurore.scatter__ph { background-image: var(--em-site-fond-aurore); }
 
 /* Lien d'appel à l'action souligné avec rond fléché */
 .cta-link { display: inline-flex; align-items: center; gap: var(--em-space-3); min-height: var(--em-site-touch); color: var(--em-on-primary); font-size: var(--em-font-size-lg); font-weight: 500; text-decoration: underline; text-underline-offset: var(--em-space-2); text-decoration-thickness: var(--em-site-border-w); white-space: nowrap; }
@@ -658,7 +658,7 @@ h3 { font-weight: 600; }
 /* Vitrine : maquette collante + fonctionnalités qui s'allument */
 .showcase__head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: var(--em-space-4); margin-bottom: var(--em-space-8); }
 .showcase { display: grid; grid-template-columns: 1fr 1fr; gap: var(--em-space-12); align-items: start; }
-.showcase__stage { position: sticky; top: var(--em-space-16); height: 28rem; border-radius: var(--em-radius-xl); background: var(--em-site-indigo-soft) url("assets/fond-lavande.webp") center / cover no-repeat; overflow: hidden; }
+.showcase__stage { position: sticky; top: var(--em-space-16); height: 28rem; border-radius: var(--em-radius-xl); background: var(--em-site-indigo-soft) var(--em-site-fond-lavande) center / cover no-repeat; overflow: hidden; }
 .stage-mock { position: absolute; inset: var(--em-space-8); display: grid; align-items: center; opacity: 0; transform: translateY(var(--em-space-6)) scale(0.96); transition: opacity var(--em-dur-slow) var(--em-ease-out), transform var(--em-dur-slow) var(--em-ease-boing); }
 .stage-mock.is-active { opacity: 1; transform: none; }
 .showcase__list { display: grid; }
@@ -774,7 +774,7 @@ body:not(.is-admin) [data-hidden] { display: none !important; }
 .orbit__ring { position: absolute; inset: 0; width: 100%; height: 100%; animation: spin 40s linear infinite; }
 .orbit__ring text { font-size: var(--em-font-size-sm); font-weight: 600; letter-spacing: 0.12em; fill: var(--em-site-indigo-strong); }
 @keyframes spin { to { rotate: 360deg; } }
-.orbit__core { display: grid; place-items: center; align-content: center; width: 62%; aspect-ratio: 1; border-radius: var(--em-radius-pill); background: var(--em-site-sun) url("assets/fond-soleil.webp") center / cover; text-align: center; font-weight: 600; box-shadow: var(--em-site-shadow); }
+.orbit__core { display: grid; place-items: center; align-content: center; width: 62%; aspect-ratio: 1; border-radius: var(--em-radius-pill); background: var(--em-site-sun) var(--em-site-fond-soleil) center / cover; text-align: center; font-weight: 600; box-shadow: var(--em-site-shadow); }
 .orbit__core strong { font-size: var(--em-font-size-hero); line-height: 1; font-weight: 500; color: var(--em-site-indigo-strong); letter-spacing: -0.03em; }
 .orbit__chip { position: absolute; max-width: 12rem; padding: var(--em-space-2) var(--em-space-4); border-radius: var(--em-radius-pill); background: var(--em-site-paper); box-shadow: var(--em-site-shadow); font-size: var(--em-font-size-sm); font-weight: 600; text-align: center; animation: float 6s var(--em-ease-in-out) infinite alternate; }
 .orbit__chip--1 { top: 2%; right: -4%; background: var(--em-site-lavender); }
@@ -1027,8 +1027,8 @@ body:not(.is-admin) [data-hidden] { display: none !important; }
 @media (max-width: 900px) { .hero--plat { min-height: 0; } .hero--plat .hero__loop { display: none; } }
 
 /* Hero « La plateforme » : tes fonds dégradés (soleil à gauche, menthe qui prend le relais à droite) */
-.hero.hero--plat { background: var(--em-site-surface) url("assets/fond-soleil.webp") center / cover no-repeat; }
-.hero--plat::before { background: url("assets/fond-menthe.webp") right center / cover no-repeat; inset: 0 0 0 30%; -webkit-mask-image: var(--em-site-fade-right-mask); mask-image: var(--em-site-fade-right-mask); }
+.hero.hero--plat { background: var(--em-site-surface) var(--em-site-fond-soleil) center / cover no-repeat; }
+.hero--plat::before { background: var(--em-site-fond-menthe) right center / cover no-repeat; inset: 0 0 0 30%; -webkit-mask-image: var(--em-site-fade-right-mask); mask-image: var(--em-site-fade-right-mask); }
 
 /* Hero « La plateforme » : titre étalé sur la largeur, ruban un peu plus bas pour ne pas le croiser */
 .hero.hero--plat h1 { max-width: none; font-size: calc(var(--em-font-size-3xl) * 1.25); }
